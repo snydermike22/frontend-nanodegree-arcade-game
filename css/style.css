@@ -1,3 +1,27 @@
 body {
-    text-align: center;
+  text-align: center;
+}
+.bkcolor {
+  background-color: blanchedalmond;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 30px;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-image: url(../images/char-princess-girl.png);
+  text-align: left;
+}
+.containercolor {
+  background-color: cadetblue;
+  padding-bottom: 100px;
+  background-image: url(../images/char-boy.png);
+
+}
+h1 {
+  color: #F3F3F3;
+}
+.buttons {
+  text-align: center;
 }

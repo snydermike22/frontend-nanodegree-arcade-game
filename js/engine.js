@@ -25,8 +25,8 @@ var Engine = (function(global) {
         ctx = canvas.getContext('2d'),
         lastTime;
 
-    canvas.width = 505;
-    canvas.height = 606;
+    canvas.width = 605;
+    canvas.height = 610;
     doc.body.appendChild(canvas);
 
     /* This function serves as the kickoff point for the game loop itself
@@ -80,7 +80,7 @@ var Engine = (function(global) {
      */
     function update(dt) {
         updateEntities(dt);
-        // checkCollisions();
+        checkCollisions();
     }
 
     /* This is called by the update function  and loops through all of the
@@ -91,10 +91,12 @@ var Engine = (function(global) {
      * render methods.
      */
     function updateEntities(dt) {
-        allEnemies.forEach(function(enemy) {
+            allEnemies.forEach(function(enemy) {
             enemy.update(dt);
+
         });
         player.update();
+        gems.update();
     }
 
     /* This function initially draws the "game level", it will then call
@@ -109,14 +111,16 @@ var Engine = (function(global) {
          */
         var rowImages = [
                 'images/water-block.png',   // Top row is water
-                'images/stone-block.png',   // Row 1 of 3 of stone
-                'images/stone-block.png',   // Row 2 of 3 of stone
-                'images/stone-block.png',   // Row 3 of 3 of stone
+                'images/stone-block2.png',   // Row 1 of 2 of stone
+                'images/stone-block.png',   // Row 2 of 2 of stone
+                'images/grass-block.png',   // Row 1 of 1 of grass
+                'images/stone-block.png',   // Row 1 of 2 of stone
+                'images/stone-block2.png',   // Row 2 of 2 of stone
                 'images/grass-block.png',   // Row 1 of 2 of grass
                 'images/grass-block.png'    // Row 2 of 2 of grass
             ],
-            numRows = 6,
-            numCols = 5,
+            numRows = 8,
+            numCols = 6,
             row, col;
 
         /* Loop through the number of rows and columns we've defined above
@@ -132,7 +136,15 @@ var Engine = (function(global) {
                  * so that we get the benefits of caching these images, since
                  * we're using them over and over.
                  */
-                ctx.drawImage(Resources.get(rowImages[row]), col * 101, row * 83);
+                ctx.drawImage(Resources.get(rowImages[row]), col * 101, row * 70);
+
+                ctx.fillStyle= "red";
+                ctx.font = "italic 15pt Tahoma";
+                ctx.fillText("Level:" + " " + count,10,80);
+                ctx.fillText("Score:" + " " + score,410,80);
+                ctx.fillStyle= "black";
+                ctx.font = "italic 15pt Tahoma";
+                ctx.fillText("Lives:" + " " + lives,20,100);
             }
         }
 
@@ -150,10 +162,18 @@ var Engine = (function(global) {
          */
         allEnemies.forEach(function(enemy) {
             enemy.render();
-        });
 
-        player.render();
+        });
+            player.render();
+
+            if (count >= 3) {
+        gems.render();
     }
+            
+   }      
+          
+     
+
 
     /* This function does nothing but it could have been a good place to
      * handle game reset states - maybe a new game menu or a game over screen
@@ -169,10 +189,13 @@ var Engine = (function(global) {
      */
     Resources.load([
         'images/stone-block.png',
+        'images/stone-block2.png',
         'images/water-block.png',
         'images/grass-block.png',
         'images/enemy-bug.png',
-        'images/char-boy.png'
+        'images/char-boy.png',
+        'images/GemBlue.png',
+        'images/char-horn-girl.png'
     ]);
     Resources.onReady(init);
 
