@@ -1,0 +1,37 @@
+Sites Uses.
+
+to be honest if I listed the hundreds of sites I went to in the probably over 100 hours of 
+working on this project, it would be 3 pages long.  I spend hours and hours going to different sites to get different pieces of info. Lived on google. But with that said, here are a few listed below.
+
+Wend to google and searched for How to xxxxx in Javascript
+How to xxxxx in HTML Canvas
+How to xxxxx
+
+Google.com
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
+http://jsonlint.com/
+http://api.jquery.com/
+https://developer.mozilla.org/en-US/docs/Web/API/Element
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+http://getbootstrap.com/css/
+http://www.w3schools.com/
+http://www.w3schools.com/js/
+https://www.google.com/fonts
+https://piazza.com/class/i4nat74xz7tsx?cid=43
+http://d3js.org/
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+http://validator.w3.org/#validate_by_input
+http://maettig.com/?page=PHP/CSS_Color_Converter
+http://www.w3schools.com/js/
+http://www.codecademy.com/en/tracks/javascript
+https://www.reddit.com/r/gamedev
+http://www.html5gamedevelopment.com/html5-game-tutorials/2013-12-developing-html5-games-1hr-video-presentation
+https://docs.google.com/document/d/1F9DY2TtWbI29KSEIot1WXRqqao7OCd7OOC2W3oubSmc/pub
+http://eloquentjavascript.net/16_canvas.html
+http://www.w3schools.com/html/html5_canvas.asp
+http://www.html5canvastutorials.com/
+http://blog.teamtreehouse.com/how-to-draw-with-html-5-canvas
+http://www.codeavengers.com/javascript/17#1.1
+http://www.html5gamedevs.com/topic/8287-adding-custom-enemy-objects-to-a-phasergroup/
+http://www.gamedevacademy.org/adding-enemies-to-a-html5-mario-style-platformer/

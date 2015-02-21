@@ -136,8 +136,8 @@ var Engine = (function(global) {
                  * so that we get the benefits of caching these images, since
                  * we're using them over and over.
                  */
+                 //draws level, Score and Lives on the screen
                 ctx.drawImage(Resources.get(rowImages[row]), col * 101, row * 70);
-
                 ctx.fillStyle= "red";
                 ctx.font = "italic 15pt Tahoma";
                 ctx.fillText("Level:" + " " + count,10,80);
@@ -147,10 +147,8 @@ var Engine = (function(global) {
                 ctx.fillText("Lives:" + " " + lives,20,100);
             }
         }
-
-
-        renderEntities();
-    }
+                renderEntities();
+}
 
     /* This function is called by the render function and is called on each game
      * tick. It's purpose is to then call the render functions you have defined
@@ -162,19 +160,13 @@ var Engine = (function(global) {
          */
         allEnemies.forEach(function(enemy) {
             enemy.render();
-
         });
             player.render();
-
             if (count >= 3) {
         gems.render();
     }
             
-   }      
-          
-     
-
-
+}
     /* This function does nothing but it could have been a good place to
      * handle game reset states - maybe a new game menu or a game over screen
      * those sorts of things. It's only called once by the init() method.
@@ -195,7 +187,8 @@ var Engine = (function(global) {
         'images/enemy-bug.png',
         'images/char-boy.png',
         'images/GemBlue.png',
-        'images/char-horn-girl.png'
+        'images/char-pink-girl.png',
+        'images/char-princess-girl.png'
     ]);
     Resources.onReady(init);
 
